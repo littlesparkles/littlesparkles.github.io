@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    About Google Analytics - Jimin&#39;s Blog
+    
+  </title>
+
+  <meta name="description" content="Google analytics란 무엇인가">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/jekyll/update/2022/11/29/Google-Analytics.html">
+  <link rel="alternate" type="application/rss+xml" title="Jimin&#39;s Blog" href="/feed.xml">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon.ico/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.ico/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon.ico/site.webmanifest">
+  <link rel="mask-icon" href="/assets/favicon.ico/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM2K7JJ2DT"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SM2K7JJ2DT');
+  </script>
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">Jimin&#39;s Blog</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/img/posts/05.jpg')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>About Google Analytics</h1>
+            
+            <h2 class="subheading">Google analytics란, 추가과정</h2>
+            
+            <span class="meta">Posted by
+              <a href="#"></a>
+              on November 29, 2022 &middot; <span class="reading-time" title="Estimated read time">
+  
+   1 min  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <h2 id="google-analytics란-무엇인가">Google analytics란 무엇인가</h2>
+
+<ul>
+  <li>구글에서 무료로 제공하고 있는 웹분석 서비스</li>
+  <li>구글의 Urchin 인수 후 제공된 서비스이다.</li>
+  <li>구글의 빅쿼리와의 연동이 존재하는데, 이를 통해 무료 사용자들이 더 넓은 클라우드 제공 기능과 연동할 수 있게 하려는 구글의 노력을 엿볼 수 있다.</li>
+</ul>
+
+<h2 id="google-analytics-추가-과정">Google analytics 추가 과정</h2>
+
+<ol>
+  <li><a href="https://analytics.google.com/analytics/web/provision/?hl=ko&amp;pli=1#/provision">Google Anayltics</a>에 접속해서 계정 설정
+    <ul>
+      <li>계정 설정, 속성 설정, 비즈니스 정보를 차례대로 입력해준다.</li>
+    </ul>
+  </li>
+  <li>
+    <p>데이터 스트림 웹 항목에 본인 블로그 주소를 입력하여 스트림 추가 (측정항목은 마음대로 선택)</p>
+  </li>
+  <li>블로그에 사용할 측정 ID 확인
+    <ul>
+      <li>측정 ID형식은 다음과 같다.
+        <ul>
+          <li>G-XXXXXXXX 형식 ⇒ Google 애널리틱스 4 를 사용함</li>
+          <li>UA-XXXXXXXX-X 형식 ⇒ 유니버설 애널리틱스 를 사용함</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>_config.yml 파일에 아래 코드 추가</li>
+</ol>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  analytics:
+    provider: "google-gtag" 
+              # false (default), "google", "google-universal", "google-gtag", "custom"
+    google:
+      tracking_id: "본인 ID"
+      anonymize_ip: # true, false (default)
+</code></pre></div></div>
+
+<ol>
+  <li>includes/head.html 파일에 아래 코드 추가</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c">&lt;!-- Google tag (gtag.js) --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">async</span> <span class="na">src=</span><span class="s">"https://www.googletagmanager.com/gtag/js?id=본인 ID"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">dataLayer</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">dataLayer</span> <span class="o">||</span> <span class="p">[];</span>
+    <span class="kd">function</span> <span class="nx">gtag</span><span class="p">(){</span><span class="nx">dataLayer</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);}</span>
+    <span class="nx">gtag</span><span class="p">(</span><span class="dl">'</span><span class="s1">js</span><span class="dl">'</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">());</span>
+
+    <span class="nx">gtag</span><span class="p">(</span><span class="dl">'</span><span class="s1">config</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">본인 ID</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/jekyll/update/2022/11/29/Markdown.html" data-toggle="tooltip" data-placement="top" title="About Markdown">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    let PAGE_URL = "http://localhost:4000/jekyll/update/2022/11/29/Google-Analytics.html"
+    let PAGE_IDENTIFIER = "/jekyll/update/2022/11/29/Google-Analytics.html"
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://littlesparkles.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:happyjmpark@gmail.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/littlesparkles">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://instagram.com/Gminii__">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy;  2022</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+
+</body>
+
+</html>
