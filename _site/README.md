@@ -1,153 +1,166 @@
-# [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/) - Official Jekyll Version
+# **개인 Git Blog 과제**
 
-[Clean Blog Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/) is a stylish, responsive blog theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features a blog homepage, about page, contact page, and an example post page along with a working contact form powered by [Formspree](https://formspree.io/).
+[![screenshot](/img/screenshot.png)](https://littlesparkles.github.io/)
+**사진을 클릭하면 블로그 페이지로 넘어갑니다!**
 
-This repository holds the official Jekyll version of the Clean Blog theme on Start Bootstrap!
+## 체점 조건
+- [ ] 마감: 2022-11-30-23:59 (모든 채점은 원격저장소의 마감일자 전 commit 버전을 기준으로 진행)
+- [ ] 본인의 git주소와 만들었던 git blog 주소를 제출 (blog 결과 확인 가능한 git주소 제출. 채점시 확인이 불가한 경우, 미제출 처리 예정)
 
-## Preview
+- 필수 과제 (80%)
+  - [x] Remote Repository의 README.md 자신의 프로젝트를 Build한 과정을 기술 (50%)
+  - [x] <username>.github.io를 접속했을 때 블로그가 정상적으로 동작 (10%)
+    - CSS 깨짐, 404 Error 등이 발생 X
+  - [x] 특강에 다뤄졌던 내용 Topic 중 배운 내용에 관해 Post 작성 (10%)
+    - 주제 : Git & Github, Jekyll, Markdown 등
+  - [ ] 기본 테마 이외의 목적에 맞는 테마 적용 (10%)
+    - Jekyll의 기본 테마 minima 이외의 테마를 적용
+    - 템플릿의 dummy 정보가 아닌, 본인이 만든 사이트의 기능에 필요한 정보 O (navbar, profile text 등)
+- 선택 과제 (20%)
+  - [x] Post에 댓글 기능 추가 (10%)
+    - 위 필수과제에 있는 Post에서 댓글 기능을 추가
+  - [x] 수업시간에 다루어지지 않은 기능(Google Analytics, Jekyll-admin 등)을 추가하고 이를 추가하는 과정을 Post로 작성 (5%)
+  - [x] 사이트에 favicon 추가 (5%)
 
-[![Clean Blog (Jekyll) Preview](https://startbootstrap.com/assets/img/screenshots/themes/clean-blog-jekyll.png)](http://StartBootstrap.github.io/startbootstrap-clean-blog-jekyll/)
+## Build
 
-**[View Live Preview](http://StartBootstrap.github.io/startbootstrap-clean-blog-jekyll/)**
+### 1단계 Github page 시작하기
 
-## Installation & Setup
+1. **Repository 생성**
+- Github에서 <username>.github.io 이름의 Repo 생성
 
-### Using RubyGems
+2. **Local-Remote Repository 연동**
+- Remote Repository의 주소를 복사
+- `git clone <repo_name> <path>`로 clone
+- `git commit -m "<commit msg>"`로 커밋 남기기
+- `git branch -M main`으로 현재 branch의 이름을 main으로 변경
+- `git status`로 현재 상태 확인 후 `git add`로 변경파일 추가
+- `git push origin main`으로 main에 로컬 변경사항 push
+  - push를 할 때 비밀번호처럼 사용 할 개인 token 생성
 
-When installing the theme using RubyGems, demo images, posts, and pages are not included. Follow the instructions below for complete setup.
+### 2단계 테마 추가
 
-1. (Optional) Create a new Jekyll site: `jekyll new my-site`
-2. Replace the current theme in your `Gemfile` with `gem "jekyll-theme-clean-blog"`.
-3. Install the theme (run the command inside your site directory): `bundle install`
-4. Replace the current theme in your `_config.yml` file with `theme: jekyll-theme-clean-blog`.
-5. Build your site: `bundle exec jekyll serve`
+1. **Jekyll 시작하기**
+- [우분투에서의 Jekyll](https://jekyllrb-ko.github.io/docs/installation/ubuntu/)
+  - Jekyll을 설치하기 전, 필요한 모든 의존요소를 가지고 있는지 확인하고 젬 설치 디렉토리를 설정
+- Jekyll과 Bundler 설치
+  - `gem install jekyll bundler`
+- Jekyll이 잘 설치되어있는지 확인
+  - `jekyll -v`
+- 현재 디렉토리(.)에 Jekyll을 설치
+  - `jekyll new . --force`
+- Jekyll 시작
+  - `(bundle exec) jekyll serve` 실행 후, localhost:4000 접속
 
-Assuming there are no errors and the site is building properly, follow these steps next:
 
-1. Create the following pages if they do not exist already (or change the extension of existing markdown files from `.md` to `.html`):
+2. **테마 적용**
+- [다음](http://jekyllthemes.org/)과 [다음](https://jekyllthemes.io/free)에서 원하는 테마 선택
+- 선택한 테마를 fork
+  - username.github.io 이름의 Repository 생성
 
-   * `index.html` - set to `layout: home`
-   * `about.html` - set to `layout: page`
-   * `contact.html` - set to `layout: page`
-   * `posts/index.html` - set to `layout: page` (you will also need to create a `posts` directory)
 
-2. Configure the `index.html` front matter. Example:
+3. **내용 수정**
+- **confing.yml** 파일에서 블로그 이름, 프로필 사진 등 수정
 
-    ```markdown
-    ---
-    layout: home
-    background: '/PATH_TO_IMAGE'
-    ---
-    ```
+```
+title: Jimin's Blog
+email: happyjmpark@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  You cannot be happy everyday, but there are happy things everyday!
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+instagram_username: Gminii__
+github_username:  littlesparkles
+```
 
-3. Configure the `about.html`, `contact.html`, and `posts/index.html` front matter. Example:
+- **_posts** 폴더에서 블로그 포스팅
+  - YYYY-MM-DD-TITLE.md 형태로 새로운 문서를 생성
+  - 다음 형식으로 post 문서를 시작
 
-    ```markdown
-    ---
-    layout: page
-    title: Page Title
-    description: This is the page description.
-    background: '/PATH_TO_IMAGE'
-    ---
-    ```
+  ```
+  ---
+  layout: post
+  title:  "제목"
+  subtitle: "간략한설명"
+  date:   업로드 날짜 및 시간
+  background: '사진'
+  categories: jekyll update
+  —
+  ```
 
-4. For each post in the `_posts` directory, update the front matter. Example:
+  - markdown 형식으로 post파일 만들기
 
-    ```markdown
-    ---
-    layout: post
-    title: "Post Title"
-    subtitle: "This is the post subtitle."
-    date: YYYY-MM-DD HH:MM:SS
-    background: '/PATH_TO_IMAGE'
-    ---
-    ```
 
-    For reference, look at the [demo repository](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll) to see how the files are set up.
+4. **댓글 기능 추가**
 
-5. Add the form to the `contact.html` page. Add the following code to your `contact.html` page:
+- [Disqus홈페이지](https://disqus.com/) 가입
+- "I want to install Disqus on my site" 선택
+- 사이트 정보 입력 - **Website Name** 기억해두기 
+- Platform 중 Jekyll 선택
+- Install Instruction을 읽어본 후 **Configure**를 눌러 다음을 진행
+- **Website URL**에 블로그 주소 입력 후 Next 이동
+- Comment 정책 체크 후, Complete Setup을 눌러 설정 마무리
+- **_config.yml**에 다음과 같은 key-value 추가
 
-    ```html
-    <form name="sentMessage" id="contactForm" novalidate>
-      <div class="control-group">
-        <div class="form-group floating-label-form-group controls">
-          <label>Name</label>
-          <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="form-group floating-label-form-group controls">
-          <label>Email Address</label>
-          <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="form-group col-xs-12 floating-label-form-group controls">
-          <label>Phone Number</label>
-          <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="form-group floating-label-form-group controls">
-          <label>Message</label>
-          <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <br>
-      <div id="success"></div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
-      </div>
-    </form>
-    ```
+```
+# Custom vars
+comment:
+  provider: "disqus"
+  disqus:
+    shortname:  "littlesparkles"
+    shortname1: "Git"
+    shortname2: "Github"
+    shortname3: "Jekyll"
+    shortname4: "Markdown"
+    shortname5: "Google-Analytics"
+```
 
-    Make sure you have the `email` setting in your `_config.yml` file set to a working email address! Once this is set, fill out the form and then check your email, verify the email address using the link sent to you by Formspree, and then the form will be working!
+- **_layout/post.html**에 Universal Code 적용 (PAGE_URL과 PAGE_IDENTIFIER은 나의 정보에 맞게 수정)
+```
+{% if page.comments %}
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    let PAGE_URL = "{{site.url}}{{page.url}}"
+    let PAGE_IDENTIFIER = "{{page.url}}"
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://littlesparkles.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}
+```
 
-6. Build your site: `bundle exec jekyll serve`
+5. Favicon 추가
+- [favicon generator](https://realfavicongenerator.net/)에 접속해서 원하는 사진 넣기
+- 다운로드를 받고 압축 폴더를 받기
+- 현재 디렉토리의 assets 폴더 내의 favicon.ico라는 폴더를 만들고 여기에 압축 풀기
+- 다운로드 하고 난 사이트 가장 하단에서 **Generate your Favicons and HTML code** 버튼 누르기
+- _includes/head.html 파일에 아래 코드 추가
+  - 파일 이름 앞에 **/assets/logo.ico** 추가하기
 
-### Using Core Files
+```
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon.ico/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.ico/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon.ico/site.webmanifest">
+<link rel="mask-icon" href="/assets/favicon.ico/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+```
 
-When using the core files, the demo images, posts, and pages are all included with the download. After following the instructions below, you can then go and change the content of the pages and posts.
-
-1. [Download](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/archive/master.zip) or Clone the repository.
-2. Update the following configuration settings in your `_config.yml` file:
-
-    * `baseurl`
-    * `url`
-    * `title`
-    * `email` (after setting this setting to a working email address, fill out the form on the contact page and send it - then check your email and verify the address and the form will send you messages when used)
-    * `description`
-    * `author`
-    * `twitter_username` (Optional)
-    * `facebook_username` (Optional)
-    * `github_username` (Optional)
-    * `linkedin_username` (Optional)
-    * `instagram_username` (Optional)
-
-3. Build your site: `bundle exec jekyll serve`
-
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/issues) here on GitHub!
-
-## About
-
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
-
-* <https://startbootstrap.com>
-* <https://twitter.com/SBootstrap>
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**.
-
-* <http://davidmiller.io>
-* <https://twitter.com/davidmillerhere>
-* <https://github.com/davidtmiller>
-
-Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+6. Google analytics
+- **Google-Analytics 기능 추가 포스팅은 블로그 내에 있음**
 
 ## Copyright and License
 
