@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-29T13:57:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jimin’s Blog</title><subtitle>You cannot be happy everyday, but there are happy things everyday!</subtitle><entry><title type="html">About Markdown</title><link href="http://localhost:4000/jekyll/update/2022/11/29/Markdown.html" rel="alternate" type="text/html" title="About Markdown" /><published>2022-11-29T10:27:40+09:00</published><updated>2022-11-29T10:27:40+09:00</updated><id>http://localhost:4000/jekyll/update/2022/11/29/Markdown</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2022/11/29/Markdown.html"><![CDATA[<h2 id="markdown이란-무엇인가">Markdown이란 무엇인가</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-29T16:11:55+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jimin’s Blog</title><subtitle>You cannot be happy everyday, but there are happy things everyday!</subtitle><entry><title type="html">About Google Analytics</title><link href="http://localhost:4000/jekyll/update/2022/11/29/Google-Analytics.html" rel="alternate" type="text/html" title="About Google Analytics" /><published>2022-11-29T14:44:13+09:00</published><updated>2022-11-29T14:44:13+09:00</updated><id>http://localhost:4000/jekyll/update/2022/11/29/Google-Analytics</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2022/11/29/Google-Analytics.html"><![CDATA[<h2 id="google-analytics란-무엇인가">Google analytics란 무엇인가</h2>
+
+<ul>
+  <li>구글에서 무료로 제공하고 있는 웹분석 서비스</li>
+  <li>구글의 Urchin 인수 후 제공된 서비스이다.</li>
+  <li>구글의 빅쿼리와의 연동이 존재하는데, 이를 통해 무료 사용자들이 더 넓은 클라우드 제공 기능과 연동할 수 있게 하려는 구글의 노력을 엿볼 수 있다.</li>
+</ul>
+
+<h2 id="google-analytics-추가-과정">Google analytics 추가 과정</h2>
+
+<ol>
+  <li><a href="https://analytics.google.com/analytics/web/provision/?hl=ko&amp;pli=1#/provision">Google Anayltics</a>에 접속해서 계정 설정
+    <ul>
+      <li>계정 설정, 속성 설정, 비즈니스 정보를 차례대로 입력해준다.</li>
+    </ul>
+  </li>
+  <li>데이터 스트림 웹 항목에 본인 블로그 주소를 입력하여 스트림 추가 (측정항목은 마음대로 선택)</li>
+  <li>블로그에 사용할 측정 ID 확인
+    <ul>
+      <li>측정 ID형식은 다음과 같다.
+        <ul>
+          <li>G-XXXXXXXX 형식 ⇒ Google 애널리틱스 4 를 사용함</li>
+          <li>UA-XXXXXXXX-X 형식 ⇒ 유니버설 애널리틱스 를 사용함</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>_config.yml 파일에 아래 코드 추가
+    <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>analytics:
+  provider: "google-gtag" 
+         # false (default), "google", "google-universal", "google-gtag", "custom"
+  google:
+ tracking_id: "본인 ID"
+ anonymize_ip: # true, false (default)
+</code></pre></div>    </div>
+  </li>
+  <li>includes/head.html 파일에 아래 코드 추가
+```html
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=본인 ID"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());</script></li>
+</ol>
+
+<p>gtag(‘config’, ‘본인 ID’);
+  &lt;/script&gt;
+```</p>
+<ol>
+  <li>Result
+<img src="file:///home/jimin/result1.png" alt="result1" />
+<img src="file:///home/jimin/result2.png" alt="result2" /></li>
+</ol>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[Google analytics란 무엇인가]]></summary></entry><entry><title type="html">About Markdown</title><link href="http://localhost:4000/jekyll/update/2022/11/29/Markdown.html" rel="alternate" type="text/html" title="About Markdown" /><published>2022-11-29T10:27:40+09:00</published><updated>2022-11-29T10:27:40+09:00</updated><id>http://localhost:4000/jekyll/update/2022/11/29/Markdown</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2022/11/29/Markdown.html"><![CDATA[<h2 id="markdown이란-무엇인가">Markdown이란 무엇인가</h2>
 <ul>
   <li>마크업 언어로, 텍스트를 통해 문서의 형태를 명시하는 방법</li>
   <li><a href="https://www.markdownguide.org/basic-syntax/">Markdown 문법 학습하기</a></li>
@@ -133,17 +186,17 @@
 <h2 id="git-기본-명령어">Git 기본 명령어</h2>
 
 <ul>
-  <li>git init: 깃 저장소 초기화</li>
-  <li>git clone: 원격 저장소의 저장소를 내 로컬에서 이용할 수 있게 그대로 복사해 가져옴</li>
-  <li>git status: 저장소 상태 체크</li>
-  <li>git branch: 새로운 브랜치 생성, 독립적인 공간을 만듬</li>
-  <li>git add: ‘staging 영역’에 변경내용 추가</li>
-  <li>git commit: staging area에 있는 변경 내용 묶음 및 정의</li>
-  <li>git push: 로컬 컴퓨터에서 서버로 변경사항을 “push”</li>
-  <li>git pull: 서버 저장소로부터 최신 버전을 “pull”
+  <li>‘git init’: 깃 저장소 초기화</li>
+  <li>‘git clone’: 원격 저장소의 저장소를 내 로컬에서 이용할 수 있게 그대로 복사해 가져옴</li>
+  <li>‘git status’: 저장소 상태 체크</li>
+  <li>‘git branch’: 새로운 브랜치 생성, 독립적인 공간을 만듬</li>
+  <li>‘git add’: ‘staging 영역’에 변경내용 추가</li>
+  <li>‘git commit’: staging area에 있는 변경 내용 묶음 및 정의</li>
+  <li>‘git push’: 로컬 컴퓨터에서 서버로 변경사항을 “push”</li>
+  <li>‘git pull’: 서버 저장소로부터 최신 버전을 “pull”
     <ul>
       <li>저장소의 변경된 내용을 로컬(내 컴퓨터) 저장소에 적용하는 작업</li>
     </ul>
   </li>
-  <li>git merge: 개별 branch에서 마친 작업을 master branch로 병합</li>
+  <li>‘git merge’: 개별 branch에서 마친 작업을 master branch로 병합</li>
 </ul>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[Git이란 무엇인가]]></summary></entry></feed>
