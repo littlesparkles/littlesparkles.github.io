@@ -30,29 +30,24 @@ comments: true
 
 4. _config.yml 파일에 아래 코드 추가
 
-```markdown
-analytics:
-  provider: "google-gtag" 
-            # false (default), "google", "google-universal", "google-gtag", "custom"
-  google:
-    tracking_id: "본인 ID"
-    anonymize_ip: # true, false (default)
-```
+  ```markdown
+  analytics:
+    provider: "google-gtag" 
+              # false (default), "google", "google-universal", "google-gtag", "custom"
+    google:
+      tracking_id: "본인 ID"
+      anonymize_ip: # true, false (default)
+  ```
 5. includes/head.html 파일에 아래 코드 추가
 
-```html
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=본인 ID"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  ```html
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=본인 ID"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', '본인 ID');
-  </script>
-```
-
-6. Result
-
-![result1](/assets/img/result1.png "result")
-![result2](/assets/img/result2.png "result")
+    gtag('config', '본인 ID');
+    </script>
+  ```
