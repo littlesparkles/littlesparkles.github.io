@@ -23,7 +23,7 @@ email: happyjmpark@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   You cannot be happy everyday, but there are happy things everyday!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://littlesparkles.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 instagram_username: Gminii__
 github_username:  littlesparkles
 
