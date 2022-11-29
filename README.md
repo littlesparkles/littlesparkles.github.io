@@ -13,14 +13,14 @@
     - CSS 깨짐, 404 Error 등이 발생 X
   - [x] 특강에 다뤄졌던 내용 Topic 중 배운 내용에 관해 Post 작성 (10%)
     - 주제 : Git & Github, Jekyll, Markdown 등
-  - [ ]기본 테마 이외의 목적에 맞는 테마 적용 (10%)
+  - [ ] 기본 테마 이외의 목적에 맞는 테마 적용 (10%)
     - Jekyll의 기본 테마 minima 이외의 테마를 적용
     - 템플릿의 dummy 정보가 아닌, 본인이 만든 사이트의 기능에 필요한 정보 O (navbar, profile text 등)
 - 선택 과제 (20%)
   - [x] Post에 댓글 기능 추가 (10%)
     - 위 필수과제에 있는 Post에서 댓글 기능을 추가
-  - [x]수업시간에 다루어지지 않은 기능(Google Analytics, Jekyll-admin 등)을 추가하고 이를 추가하는 과정을 Post로 작성 (5%)
-  - [x]사이트에 favicon 추가 (5%)
+  - [x] 수업시간에 다루어지지 않은 기능(Google Analytics, Jekyll-admin 등)을 추가하고 이를 추가하는 과정을 Post로 작성 (5%)
+  - [x] 사이트에 favicon 추가 (5%)
 
 ## Build
 
