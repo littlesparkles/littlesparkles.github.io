@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    Welcome to Jekyll! - Jimin&#39;s Blog
+    About Git - Jimin&#39;s Blog
     
   </title>
 
-  <meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...">
+  <meta name="description" content="Git이란 무엇인가">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -20,7 +20,7 @@
   <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/jekyll/update/2022/11/29/welcome-to-jekyll.html">
+  <link rel="canonical" href="http://localhost:4000/jekyll/update/2022/11/29/Git.html">
   <link rel="alternate" type="application/rss+xml" title="Jimin&#39;s Blog" href="/feed.xml">
 
 </head>
@@ -58,20 +58,22 @@
 
   <!-- Page Header -->
 
-  <header class="masthead">
-    
+<header class="masthead" style="background-image: url('/img/posts/01.jpg')">
+  
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Welcome to Jekyll!</h1>
+            <h1>About Git</h1>
+            
+            <h2 class="subheading">Git이란, 특징, 기본용어, 기본명령어</h2>
             
             <span class="meta">Posted by
               <a href="#"></a>
               on November 29, 2022 &middot; <span class="reading-time" title="Estimated read time">
   
-   1 min  read </span>
+   2 mins  read </span>
 
             </span>
           </div>
@@ -84,24 +86,64 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
-        <p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+        <h2 id="git이란-무엇인가">Git이란 무엇인가</h2>
 
-<p>Jekyll requires blog post files to be named according to the following format:</p>
+<ul>
+  <li>가장 일반적으로 사용되는 버전 관리 시스템(version control system)</li>
+  <li>파일에 대한 변경 내용을 추적하므로 수행된 작업에 대한 기록이 있으며 필요할 경우 특정 버전으로 되돌릴 수 있다.</li>
+  <li>협업을 더 쉽게 만들어 여러 사람의 변경 사항을 모두 하나의 소스로 병합할 수 있게 한다.</li>
+</ul>
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+<h2 id="git의-특징">Git의 특징</h2>
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<ul>
+  <li>로컬로 실행되는 소프트웨어
+    <ul>
+      <li>파일과 파일 기록이 컴퓨터에 저장된다.</li>
+    </ul>
+  </li>
+  <li>온라인 호스트 (예: Github 또는 Bitbucket)를 사용하여 파일의 복사본과 해당 수정 기록을 저장할 수 있다.</li>
+  <li>변경사항을 업로드하고 다른 개발자의 변경사항을 다운로드할 수 있는 중앙 위치에 있으므로 다른 개발자와 더 쉽게 협업할 수 있다.</li>
+  <li>자동으로 변경 사항을 병합할 수 있으므로 두 사람이 같은 파일의 다른 부분을 작업하고 나중에 서로의 작업을 잃지 않고 변경 사항을 병합할 수 있다.</li>
+</ul>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<h2 id="git-기본-용어">Git 기본 용어</h2>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<ul>
+  <li>Repository: 저장소
+    <ul>
+      <li>작업자가 변경한 모든 히스토리를 확인 가능</li>
+    </ul>
+  </li>
+  <li>Working Tree: 저장소를 어느 한 시점을 바라보는 작업자의 현재 시점</li>
+  <li>Staging Area: 저장소에 커밋하기 전에 커밋을 준비하는 위치</li>
+  <li>Commit: 현재 변경된 작업 상태를 점검을 마치면 확정하고 저장소에 저장하는 작업</li>
+  <li>Head: 현재 작업중인 branch</li>
+  <li>Branch: 가지/분기점
+    <ul>
+      <li>작업할 때에 현재 상태를 복사하여 branch에서 작업을 한 후에 완전하다 싶을 때 merge를 하여 작업을 함</li>
+    </ul>
+  </li>
+  <li>Merge: 다른 branch의 내용을 현재 branch로 가져와 합치는 작업을 의미</li>
+</ul>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+<h2 id="git-기본-명령어">Git 기본 명령어</h2>
 
+<ul>
+  <li>git init: 깃 저장소 초기화</li>
+  <li>git clone: 원격 저장소의 저장소를 내 로컬에서 이용할 수 있게 그대로 복사해 가져옴</li>
+  <li>git status: 저장소 상태 체크</li>
+  <li>git branch: 새로운 브랜치 생성, 독립적인 공간을 만듬</li>
+  <li>git add: ‘staging 영역’에 변경내용 추가</li>
+  <li>git commit: staging area에 있는 변경 내용 묶음 및 정의</li>
+  <li>git push: 로컬 컴퓨터에서 서버로 변경사항을 “push”</li>
+  <li>git pull: 서버 저장소로부터 최신 버전을 “pull”
+    <ul>
+      <li>저장소의 변경된 내용을 로컬(내 컴퓨터) 저장소에 적용하는 작업</li>
+    </ul>
+  </li>
+  <li>git merge: 개별 branch에서 마친 작업을 master branch로 병합</li>
+</ul>
 
 
         <hr>
@@ -109,9 +151,9 @@
         <div class="clearfix">
 
           
-          <a class="btn btn-primary float-left" href="/2020/01/31/man-must-explore.html" data-toggle="tooltip" data-placement="top" title="Man must explore, and this is exploration at its greatest">&larr; Previous<span class="d-none d-md-inline">
-              Post</span></a>
           
+          <a class="btn btn-primary float-right" href="/jekyll/update/2022/11/29/Github.html" data-toggle="tooltip" data-placement="top" title="About Github">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
           
 
         </div>
