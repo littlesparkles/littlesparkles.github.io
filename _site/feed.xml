@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-29T10:02:50+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jimin’s Blog</title><subtitle>You cannot be happy everyday, but there are happy things everyday!</subtitle><entry><title type="html">About Jekyll</title><link href="http://localhost:4000/jekyll/update/2022/11/29/Jekyll.html" rel="alternate" type="text/html" title="About Jekyll" /><published>2022-11-29T09:58:26+09:00</published><updated>2022-11-29T09:58:26+09:00</updated><id>http://localhost:4000/jekyll/update/2022/11/29/Jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2022/11/29/Jekyll.html"><![CDATA[<h2 id="jekyll이란-무엇인가">Jekyll이란 무엇인가</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-29T10:06:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jimin’s Blog</title><subtitle>You cannot be happy everyday, but there are happy things everyday!</subtitle><entry><title type="html">About Markdown</title><link href="http://localhost:4000/jekyll/update/2022/11/29/Markdown.html" rel="alternate" type="text/html" title="About Markdown" /><published>2022-11-29T10:00:43+09:00</published><updated>2022-11-29T10:00:43+09:00</updated><id>http://localhost:4000/jekyll/update/2022/11/29/Markdown</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2022/11/29/Markdown.html"><![CDATA[<h2 id="markdown이란-무엇인가">Markdown이란 무엇인가</h2>
+<ul>
+  <li>마크업 언어로, 텍스트를 통해 문서의 형태를 명시하는 방법</li>
+  <li><a href="https://www.markdownguide.org/basic-syntax/">Markdown 문법 학습하기</a></li>
+</ul>
+
+<h2 id="markdown의-장점">Markdown의 장점</h2>
+<ol>
+  <li>다양한 분야에서 사용 가능
+    <ul>
+      <li>사람들은 웹 사이트, 문서, 노트, 책, 프리젠테이션, 전자 메일 메시지 및 기술 문서를 만드는 데 사용</li>
+    </ul>
+  </li>
+  <li>가벼움
+    <ul>
+      <li>마크다운 형식의 텍스트가 들어 있는 파일은 거의 모든 응용 프로그램을 사용하여 열 수 있다.</li>
+      <li>현재 사용 중인 마크다운 응용 프로그램이 마음에 들지 않으면 다른 마크다운 응용 프로그램으로 마크다운 파일을 가져올 수 있다.</li>
+    </ul>
+  </li>
+  <li>플랫폼에 의존하지 않음
+    <ul>
+      <li>운영 체제를 실행하는 모든 장치에서 마크다운 형식의 텍스트를 만들 수 있다.</li>
+    </ul>
+  </li>
+  <li>미래 걱정이 없음
+    <ul>
+      <li>사용 중인 응용 프로그램이 나중에 작동을 중지하더라도 텍스트 편집 응용 프로그램을 사용하여 마크다운 형식의 텍스트를 읽을 수 있다.</li>
+    </ul>
+  </li>
+  <li>마크다운은 어디에나 있음
+    <ul>
+      <li>Reddit 및 GitHub와 같은 웹 사이트는 Markdown을 지원하며 많은 데스크톱 및 웹 기반 응용 프로그램이 이를 지원한다.</li>
+    </ul>
+  </li>
+</ol>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[Markdown이란 무엇인가 마크업 언어로, 텍스트를 통해 문서의 형태를 명시하는 방법 Markdown 문법 학습하기]]></summary></entry><entry><title type="html">About Jekyll</title><link href="http://localhost:4000/jekyll/update/2022/11/29/Jekyll.html" rel="alternate" type="text/html" title="About Jekyll" /><published>2022-11-29T09:58:26+09:00</published><updated>2022-11-29T09:58:26+09:00</updated><id>http://localhost:4000/jekyll/update/2022/11/29/Jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2022/11/29/Jekyll.html"><![CDATA[<h2 id="jekyll이란-무엇인가">Jekyll이란 무엇인가</h2>
 
 <ul>
   <li>텍스트 변환 엔진으로, 마크업 언어로 글을 작성하면 미리 정의해 놓은 규칙에 따라서 정적인 웹사이트를 만들어줌
