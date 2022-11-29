@@ -37,7 +37,10 @@ comment:
   provider: "disqus"
   disqus:
     shortname:  "littlesparkles"
-
+    shortname1: "Git"
+    shortname2: "Github"
+    shortname3: "Jekyll"
+    shortname4: "Markdown"
 # Defaults
 defaults:
   # _posts
