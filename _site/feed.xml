@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-29T16:19:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jimin’s Blog</title><subtitle>You cannot be happy everyday, but there are happy things everyday!</subtitle><entry><title type="html">About Google Analytics</title><link href="http://localhost:4000/jekyll/update/2022/11/29/Google-Analytics.html" rel="alternate" type="text/html" title="About Google Analytics" /><published>2022-11-29T14:44:13+09:00</published><updated>2022-11-29T14:44:13+09:00</updated><id>http://localhost:4000/jekyll/update/2022/11/29/Google-Analytics</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2022/11/29/Google-Analytics.html"><![CDATA[<h2 id="google-analytics란-무엇인가">Google analytics란 무엇인가</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-29T16:23:57+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jimin’s Blog</title><subtitle>You cannot be happy everyday, but there are happy things everyday!</subtitle><entry><title type="html">About Google Analytics</title><link href="http://localhost:4000/jekyll/update/2022/11/29/Google-Analytics.html" rel="alternate" type="text/html" title="About Google Analytics" /><published>2022-11-29T14:44:13+09:00</published><updated>2022-11-29T14:44:13+09:00</updated><id>http://localhost:4000/jekyll/update/2022/11/29/Google-Analytics</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2022/11/29/Google-Analytics.html"><![CDATA[<h2 id="google-analytics란-무엇인가">Google analytics란 무엇인가</h2>
 
 <ul>
   <li>구글에서 무료로 제공하고 있는 웹분석 서비스</li>
@@ -9,9 +9,7 @@
 <h2 id="google-analytics-추가-과정">Google analytics 추가 과정</h2>
 
 <ol>
-  <li>
-    <p><a href="https://analytics.google.com/analytics/web/provision/?hl=ko&amp;pli=1#/provision">Google Anayltics</a>에 접속해서 계정 설정</p>
-
+  <li><a href="https://analytics.google.com/analytics/web/provision/?hl=ko&amp;pli=1#/provision">Google Anayltics</a>에 접속해서 계정 설정
     <ul>
       <li>계정 설정, 속성 설정, 비즈니스 정보를 차례대로 입력해준다.</li>
     </ul>
@@ -19,9 +17,7 @@
   <li>
     <p>데이터 스트림 웹 항목에 본인 블로그 주소를 입력하여 스트림 추가 (측정항목은 마음대로 선택)</p>
   </li>
-  <li>
-    <p>블로그에 사용할 측정 ID 확인</p>
-
+  <li>블로그에 사용할 측정 ID 확인
     <ul>
       <li>측정 ID형식은 다음과 같다.
         <ul>
@@ -31,9 +27,7 @@
       </li>
     </ul>
   </li>
-  <li>
-    <p>_config.yml 파일에 아래 코드 추가</p>
-  </li>
+  <li>_config.yml 파일에 아래 코드 추가</li>
 </ol>
 
 <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  analytics:
@@ -43,6 +37,7 @@
       tracking_id: "본인 ID"
       anonymize_ip: # true, false (default)
 </code></pre></div></div>
+
 <ol>
   <li>includes/head.html 파일에 아래 코드 추가</li>
 </ol>
