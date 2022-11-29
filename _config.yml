@@ -62,6 +62,7 @@ analytics:
   google:
     tracking_id: "G-SM2K7JJ2DT"
     anonymize_ip: # true, false (default)
+  
 
 # Exclude from processing.
 # The following items will not be processed, by default.
